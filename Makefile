@@ -34,3 +34,31 @@ clean-all:
 	cd user-profile-service && make clean
 	cd transaction-ledger && make clean
 	cd risk-detection && make clean
+
+build-all:
+	@echo "⚙️ Build tất cả service..."
+	cd auth-service && make build
+	cd user-profile-service && make build
+	cd transaction-ledger && make build
+	cd risk-detection && make build
+
+test-all:
+	@echo "🧪 Test toàn bộ service..."
+	cd auth-service && make test
+	cd user-profile-service && make test
+	cd transaction-ledger && make test
+	cd risk-detection && make test
+
+format-all:
+	@echo "🎨 Format toàn bộ code..."
+	cd auth-service && make fmt
+	cd user-profile-service && make fmt
+	cd transaction-ledger && make fmt
+	cd risk-detection && make fmt
+
+clean-all:
+	@echo "🧹 Cleaning all..."
+	cd auth-service && make clean
+	cd user-profile-service && make clean
+	cd transaction-ledger && make clean
+	cd risk-detection && make clean
