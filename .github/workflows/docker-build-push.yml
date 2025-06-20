@@ -11,12 +11,10 @@ jobs:
     strategy:
       matrix:
         service:
-          [
-            auth-service,
-            user-profile-service,
-            transaction-ledger,
-            risk-detection,
-          ]
+          - auth-service
+          - user-profile-service
+          - transaction-ledger
+          - risk-detection
 
     steps:
       - name: Checkout source code
